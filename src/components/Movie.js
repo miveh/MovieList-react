@@ -6,9 +6,14 @@ function Movie({ id, name, source, cover }) {
       <div className="bg-purple-300 Cover">
         <img className="" src={cover} />
       </div>
+
       <div className="Content">
         <p>{name}</p>
-        <div className="StarRating">star</div>
+
+        <div className="StarRating">
+          <img src="./images/Ratings.svg" />
+        </div>
+
         <div>
           <div className="Watched">watched</div>
           <img src="./images/deleteBtn.svg" />

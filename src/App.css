@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 *,
 *::before,
@@ -48,7 +49,6 @@ h6 {
 }
 .Main {
   font-family: Poppins;
-
   width: inherit;
   height: inherit;
   display: flex;
@@ -124,6 +124,9 @@ h6 {
 }
 
 .Movie .Cover {
+  position: relative;
+  left: 2rem;
+  bottom: 2rem;
   width: 25%;
   height: 100%;
   box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
@@ -132,4 +135,34 @@ h6 {
 .Movie .Cover img {
   width: 100%;
   height: inherit;
+}
+
+.Movie .Content {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: center;
+  row-gap: 1rem;
+  margin-left: 6rem;
+}
+
+.Movie .Content :first-child {
+  color: #6f6f6f;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.Movie .Content :last-child {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Movie .Content :last-child .Watched {
+  background: #9c948a;
+  color: white;
+  padding: 0.5rem 1.5rem;
 }
