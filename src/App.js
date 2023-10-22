@@ -14,7 +14,7 @@ function App() {
       id: 2,
       cover: "./images/images(1).jfif",
       source: "./videos/4K_7.mp4",
-      name: "movie2",
+      name: "movie32",
     },
     {
       id: 3,
@@ -24,18 +24,36 @@ function App() {
     },
   ]);
 
+  document.querySelector(".Search");
+
+  function search(e) {
+    let input = e.target.value;
+
+    movieList.forEach((movie) => {
+      !movie.name.includes(input)
+        ? (document.querySelector(`[data-id="${movie.id}"]`).style.display =
+            "none")
+        : (document.querySelector(`[data-id="${movie.id}"]`).style.display =
+            "");
+    });
+  }
+
   return (
     <div className="Main">
       <div className="App">
         <h1>ADD A MOVIE</h1>
         <div className="Search">
-          <input type="search" placeholder="Movie Title"></input>
+          <input
+            type="search"
+            onChange={search}
+            placeholder="Movie Title"
+          ></input>
         </div>
 
-        {/* component */}
         <div className="MovieList">
           {movieList.length > 0 ? (
             movieList.map((movie) => (
+              // Component
               <Movie
                 id={movie.id}
                 name={movie.name}
@@ -54,6 +72,7 @@ function App() {
           )}
         </div>
       </div>
+
       <div className="AddBtn">
         <img src="./images/floatinBtn.svg" />
       </div>

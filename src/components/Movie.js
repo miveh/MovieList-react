@@ -2,7 +2,7 @@ import React from "react";
 
 function Movie({ id, name, source, cover }) {
   return (
-    <div className="Movie">
+    <div data-id={id} className="Movie">
       <div className="bg-purple-300 Cover">
         <img className="" src={cover} />
       </div>
