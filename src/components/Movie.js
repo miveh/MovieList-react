@@ -17,6 +17,7 @@ function Movie({ id, name, source, cover }) {
         <div>
           <div className="Watched">watched</div>
           <img src="./images/deleteBtn.svg" />
+          <img id="editBtn" src="./images/editBtn.svg" />
         </div>
       </div>
     </div>
